@@ -3,7 +3,7 @@
 Funcionalidade: Tela de Login
 Como usuário do sistema
 Quero me autenticar
-Para acessar as funcionalidades do sistema
+Para acessar as funcionalidades do sistema.
 
 Contexto:
 Dado que eu acesso o sistema XPTO
