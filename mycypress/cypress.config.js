@@ -6,16 +6,4 @@ module.exports = defineConfig({
       // implement node event listeners here
     },
   },
- integration: {
-    setupNodeEvents(on, config) {
-      // implement node event listeners here
-    },
-  },
-
-  component: {
-    devServer: {
-      framework: "react",
-      bundler: "webpack",
-    },
-  },
 });

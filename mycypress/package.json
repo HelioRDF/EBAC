@@ -1,7 +1,7 @@
 {
-  "name": "cypress",
+  "name": "mycypress",
   "version": "1.0.0",
-  "description": "",
+  "description": "<npm init -y >\r <npm install cypress -D> -D indica dependência de desenvolvimento\r <npx cypress open>\r Instalar no VsCode a extensão | es6 mocha snippets | Cypress Snippets | Material Icon Theme | IntelliCode",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,9 +10,6 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^12.1.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "webpack": "^5.75.0"
+    "cypress": "^12.1.0"
   }
 }
