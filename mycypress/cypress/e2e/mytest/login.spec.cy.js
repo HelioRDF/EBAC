@@ -13,26 +13,20 @@ context('Funcionalidade Login', () => {
     afterEach(() => {
         //Após cada CT
     });
-    it('Deve fazer login com sucesso', () => {
-        cy.get('#username').type(perfil.usuario)
-        cy.get('#password').type(perfil.senha)
-        cy.get('.woocommerce-form > .button').click()
+    it('Deve fazer login com sucesso', () => { 
+        cy.login(perfil.usuario, perfil.senha)
         cy.get('.woocommerce-MyAccount-content > :nth-child(2)').should('contain', 'Olá,')
         cy.screenshot("login/Deve fazer login com sucesso")
     })
 
-    it.only('Deve exibir uma mensagem de erro ao inserir uma senha inválida', () => {
-        cy.get('#username').type(perfil.usuario)
-        cy.get('#password').type(perfil.senha_invalida)
-        cy.get('.woocommerce-form > .button').click()
+    it('Deve exibir uma mensagem de erro ao inserir uma senha inválida', () => {
+        cy.login(perfil.usuario, perfil.senha_invalida)
         cy.get('.woocommerce-error').should('contain', 'a senha fornecida para o e-mail heliordf@hotmail.com está incorreta. Perdeu a senha?')
         cy.screenshot("login/Deve exibir uma mensagem de erro ao inserir uma senha inválida")
     })
 
     it('Deve exibir uma mensagem de erro ao inserir um usuário inválido', () => {
-        cy.get('#username').type(perfil.usuario_invalido)
-        cy.get('#password').type(perfil.senha)
-        cy.get('.woocommerce-form > .button').click()
+        cy.login(perfil.usuario_invalido, perfil.senha)
         cy.get('.woocommerce-error').should('contain', 'Endereço de e-mail desconhecido. Verifique novamente ou tente seu nome de usuário.')
         cy.screenshot("login/Deve exibir uma mensagem de erro ao inserir um usuário inválido")
     })
